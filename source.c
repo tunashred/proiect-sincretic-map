@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void hanoi(int nr_discuri_pe_sursa, char sursa, char destinatie, char intermediar) {
     if(nr_discuri_pe_sursa == 0) {
@@ -12,8 +13,9 @@ void hanoi(int nr_discuri_pe_sursa, char sursa, char destinatie, char intermedia
     hanoi(nr_discuri_pe_sursa - 1, intermediar, destinatie, sursa);
 }
 
-int main() {
-    hanoi(2, 'A', 'B', 'C');
+int main(int argc, char *argv[]) {
+    int nr_discuri_pe_sursa = atoi(argv[1]);
+    hanoi(nr_discuri_pe_sursa, 'A', 'B', 'C');
 
     return 0;
 }
