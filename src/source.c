@@ -7,9 +7,7 @@ void hanoi(int nr_discuri_pe_sursa, char sursa, char destinatie, char intermedia
     }
 
     hanoi(nr_discuri_pe_sursa - 1, sursa, intermediar, destinatie);
-
     printf("Muta discul #%d de pe '%c' pe '%c'.\n", nr_discuri_pe_sursa, sursa, destinatie);
-
     hanoi(nr_discuri_pe_sursa - 1, intermediar, destinatie, sursa);
 }
 
