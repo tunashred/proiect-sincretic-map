@@ -14,8 +14,11 @@ void hanoi(int nr_discuri_pe_sursa, char sursa, char destinatie, char intermedia
 }
 
 int main(int argc, char *argv[]) {
-    int nr_discuri_pe_sursa = atoi(argv[1]);
-    hanoi(nr_discuri_pe_sursa, 'A', 'B', 'C');
+    int nr_discuri = atoi(argv[1]);
+    if(argv[2]) {
+        nr_discuri = atoi(argv[2]);
+    }
+    hanoi(nr_discuri, 'A', 'C', 'B');
 
     return 0;
 }
