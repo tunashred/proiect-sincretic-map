@@ -20,7 +20,7 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_PASSWORD }}
         -
             name: Build with Makefile
-            uses: make
+            run: make
             with:
                 context: .
                 file: ./src/makefile
