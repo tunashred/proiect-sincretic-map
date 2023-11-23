@@ -1,7 +1,7 @@
 FROM busybox:latest
 
-COPY src/runme .
-RUN chmod +x runme
+COPY src/hanoi .
+RUN chmod +x hanoi
 
-ENTRYPOINT ["./runme"]
+ENTRYPOINT ["./hanoi"]
 CMD ["3"]

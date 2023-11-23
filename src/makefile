@@ -1,9 +1,7 @@
-runme: source.o
-	gcc -o runme source.o
-
-source.o: source.c
+hanoi: source.c
 	gcc -o source.o -c source.c
+	gcc -o hanoi source.o
 
 .PHONY: clean
 clean:
-	rm -f runme source.o
+	rm -f hanoi source.o
