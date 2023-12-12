@@ -11,7 +11,7 @@ To build and run the project locally, follow these steps:
 2. Run the Docker container:
 ```docker run hanoi:latest <optional: disk number, default is 3>```
 
-# Docker Build Configuration('docker-build.yml')
+# Docker Build Configuration
 The file ```docker-build.yml``` is a ```GitHub Actions workflow``` for building and pushing a Docker image to ```Docker Hub``` when changes are made to the main branch. The workflow includes the following steps:
 1. **Checkout**: Checks out the repository.
 2. **Login to Docker Hub**: Logs in to ```Docker Hub``` using the specified credentials.
@@ -51,7 +51,7 @@ jobs:
               tags: ${{ secrets.DOCKERHUB_USERNAME }}/proiect-sincretic:latest
 ```
 
-# Dockerfile('Dockerbuild')
+# Dockerfile
 The ```Dockerfile``` file is based on the ```busybox``` image.
 1. Copies the compiled ```hanoi``` executable into the image.
 2. Sets the executable permission.
@@ -66,7 +66,7 @@ ENTRYPOINT ["./hanoi"]
 CMD ["3"]
 ```
 
-# Source Code('source.c')
+# Source Code
 The ```source.c``` contains the C source code for solving the Tower of Hanoi problem. It defines a recursive function **'hanoi'** and it's called in **'main'** using the arguments passed through command line.
 ```
 #include <stdio.h>
@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-# Makefile('makefile')
+# Makefile
 The ```makefile``` file includes the compilation rules for the source code and it creates the **'hanoi'** executable.
 ```
 hanoi: source.o
